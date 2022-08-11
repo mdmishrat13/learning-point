@@ -1,0 +1,26 @@
+.faq{
+    padding: 2rem;
+    background-color: var(--color-bg2);
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.faq h4{
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.faq__icon{
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+.faq p{
+    margin-top: 0.8rem;
+    display: none;
+}
+.faq.open p{
+   display: block;
+}

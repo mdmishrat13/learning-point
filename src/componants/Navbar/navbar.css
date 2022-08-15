@@ -1,37 +1,73 @@
-nav{
-    width: 100vw;
-    height: 5rem;
-    background:transparent;
-    position: fixed;
-    top: 0;
-    z-index: 11;
+nav {
+  width: 100vw;
+  height: 5rem;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 11;
 }
-.nav__background{
-    background: var(--color-primary);
-    box-shadow: 0 1rem 2rem rgba(0,0,0, 0.3);
-}
-
-.nav__container{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav__background {
+  background: var(--color-primary);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-nav button{
+.nav__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  display: none;
+  background: transparent;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.nav__menu-responsive {
+  display: none;
+}
+
+.nav__menu a {
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.nav__menu a:hover {
+  color: var(--color-bg1);
+}
+.nav__hide {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  nav button {
+    display: block;
+  }
+  .nav__menu {
     display: none;
-}
-
-.nav__menu{
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-}
-
-.nav__menu a{
-    font-size: 0.9rem;
-    transition: var(--transition);
-}
-.nav__menu a:hover{
-    color: var(--color-bg1);
+  }
+  .nav__menu-responsive {
+    position: absolute;
+    top: 5rem;
+    right: 5%;
+    flex-direction: column;
+    background: var(--color-primary);
+    padding: 2rem 5rem;
+    box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.3);
+    display: block;
+  }
+  .nav__menu-responsive-item {
+    margin: 10px 0;
+  }
 }

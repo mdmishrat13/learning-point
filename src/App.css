@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -8,76 +8,77 @@
   list-style: none;
 }
 
-:root{
+:root {
   --color-primary: #6c63ff;
   --color-success: #88bf8e;
   --color-warning: #f7c94b;
   --color-danger: #f75842;
-  --color-danger-variant: rgba(247,88,66, 0.4);
+  --color-danger-variant: rgba(247, 88, 66, 0.4);
   --color-white: #fff;
-  --color-light: rgba(255,255,255, 0.7);
+  --color-light: rgba(255, 255, 255, 0.7);
   --color-black: #000;
   --color-bg: #1f2641;
-  --color-bg1:#424890;
-  --color-bg2:#4f59c2;
-  
-
+  --color-bg1: #424890;
+  --color-bg2: #4f59c2;
 
   --container-width-lg: 76%;
-  --container-width-md:90%;
-  --container-width-sm:94%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
 
   --transition: all 400ms ease;
-
 }
 
-body{
-  font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
   color: var(--color-white);
   line-height: 1.7;
   background: var(--color-bg);
 }
-.container{
+.container {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
 
-section{
+section {
   padding: 6rem 0;
 }
 
-section h2{
+section h2 {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   line-height: 1.2;
 }
 
-h1{
+h1 {
   font-size: 2.4rem;
 }
-h2{
+h2 {
   font-size: 2rem;
 }
-h3{
+h3 {
   font-size: 1.6rem;
 }
-h4{
+h4 {
   font-size: 1.3rem;
 }
 
-a{
+a {
   color: var(--color-white);
 }
-img{
+img {
   width: 100%;
   display: block;
   object-fit: cover;
 }
 
-.btn{
+.btn {
   display: inline-block;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -87,13 +88,53 @@ img{
   transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
   background: transparent;
   color: var(--color-white);
   border-color: var(--color-white);
 }
 
-.btn-primary{
+.btn-primary {
   background-color: var(--color-danger);
-  color: var(--color-white)
+  color: var(--color-white);
+}
+
+/* media quaries for tablet  */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 1.7rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
 }

@@ -4,6 +4,7 @@ import "./navbar.css";
 
 const Navbar = () => {
   const [scrolled,setScrolled] = useState(true)
+  const [open, setOpen] = useState(false);
 
   const changeNavbarColor = () =>{
     if(window.scrollY >= 20){
@@ -22,7 +23,7 @@ const Navbar = () => {
           {" "}
           <h4>Learning Point</h4>
         </a>
-        <ul className="nav__menu">
+        <ul className='nav__menu'>
           <li>
             <a href="#">Home</a>
           </li>
@@ -36,8 +37,22 @@ const Navbar = () => {
             <a href="#">About Us</a>
           </li>
         </ul>
-        <button className="open-menu-btn"><i className="uil uil-bars"></i></button>
-        <button className="close-menu-btn"><i className="uil uil-multiply"></i></button>
+        {/* for responsive  */}
+        <ul className={open?'nav__menu-responsive':'nav__hide'}>
+          <li className="nav__menu-responsive-item">
+            <a href="#">Home</a>
+          </li>
+          <li className="nav__menu-responsive-item">
+            <a href="#">Courses</a>
+          </li>
+          <li className="nav__menu-responsive-item">
+            <a href="#">Contact</a>
+          </li>
+          <li className="nav__menu-responsive-item">
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+        <button onClick={()=>setOpen(!open)}><i className={open?'uil uil-multiply':'uil uil-bars'}></i></button>
       </div>
     </nav>
   );

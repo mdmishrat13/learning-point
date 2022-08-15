@@ -1,0 +1,32 @@
+.testemonial{
+    border-top: 2rem;
+}
+
+.testemonial__image{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1rem solid var(--color-primary);
+    margin: 0 auto 1rem;
+}
+.testemonial__info{
+    text-align: center;
+}
+.testemonial__body{
+    padding: 2rem;
+    margin: 3rem 0;
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+.testemonial__body::before{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, transparent ,var(--color-primary) ,var(--color-primary) ,var(--color-primary));
+    position: absolute;
+    top: -1.5rem;
+    transform: rotate(45deg);
+    left: 48%;
+}

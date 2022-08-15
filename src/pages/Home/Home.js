@@ -11,6 +11,7 @@ import course5 from './../../images/course5.jpg'
 import course6 from './../../images/course6.jpg'
 import Course from "../../componants/Course/Course";
 import Faq from "../../componants/Faq/Faq";
+import Testemonial from "../../componants/Testemonial/Testemonial";
 
 const Home = () => {
     const categories = [
@@ -154,6 +155,45 @@ const Home = () => {
         "answer":"you can learn everything what you need to know to build your carees as a software engineer you can learn everything what you need to know to build your carees as a software engineer"
       },
     ]
+    const testemonials = [
+      {
+        "id":1,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+      {
+        "id":1,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+      {
+        "id":2,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+      {
+        "id":3,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+      {
+        "id":4,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+      {
+        "id":5,
+        "name":'md mishtart hossain',
+        "title":"web designer",
+        "testemonial":" amar sonar bangla ami tomay valobashi chirodin tomar akash tomar batash amar prane oma amar prane bajay bashi sonar bangla ami tomay valobashi amar sonar bangla ami tomay valobashi chirodin tomar"
+      },
+    ]
+
   return (
     <div>
       <Navbar />
@@ -218,6 +258,57 @@ const Home = () => {
             {faqs.map((faq)=><Faq faq={faq} key={faq.id}></Faq> )}
         </div>
       </section>
+
+       {/* testemonial section  */}
+
+      <section className="container testemonial__container ">
+        <h2>Students Testemonial</h2>
+        <div className="testemonials"
+        >
+            {testemonials.map((testemonial)=> <Testemonial testemonial={testemonial} key={testemonial.id}></Testemonial> )}
+        </div>
+      </section>
+
+      <footer>
+        <div className="container footer__container">
+        <div className="footer__items1">
+        <ul>
+            <h4>Learning Point</h4>
+            <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, incidunt!</p></li>
+          </ul>
+        </div>
+        <div className="footer__items2">
+        <ul>
+            <h4>Permalinks</h4>
+            <li><p>Home</p></li>
+            <li><p>Courses</p></li>
+            <li><p>About us</p></li>
+          </ul>
+        </div>
+        <div className="footer__items3">
+          <ul>
+            <h4>Primacy</h4>
+            <li><p>Privecy Policy</p></li>
+            <li><p>Terms and Condition</p></li>
+            <li><p>Refund policy</p></li>
+          </ul>
+        </div>
+        <div className="footer__items4">
+          <ul>
+            <h4>Contact Us</h4>
+            <li><p>+8801740261643</p></li>
+            <li><p>mdmishrat13@gmail.com</p></li>
+            <ul className="footer__icons">
+              <li> <i class="uil uil-facebook-f"></i></li>
+              <li> <i class="uil uil-youtube"></i></li>
+              <li> <i class="uil uil-twitter"></i></li>
+              <li> <i class="uil uil-github"></i></li>
+            </ul>
+          </ul>
+        </div>
+        </div>
+        <p className="footer__copyright">&copy; All Right Reserved by Learning Point</p>
+      </footer>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled,setScrolled] = useState(true)
@@ -25,7 +26,10 @@ const Navbar = () => {
         </a>
         <ul className='nav__menu'>
           <li>
-            <a href="#">Home</a>
+          <Link to="/home">Home</Link>
+          </li>
+          <li>
+          <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
             <a href="#">Courses</a>
@@ -34,7 +38,7 @@ const Navbar = () => {
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">About Us</a>
+          <Link to="/about">About Us</Link>
           </li>
         </ul>
         {/* for responsive  */}
@@ -49,7 +53,7 @@ const Navbar = () => {
             <a href="#">Contact</a>
           </li>
           <li className="nav__menu-responsive-item">
-            <a href="#">About Us</a>
+            {/* <Link to="/about">About Us</Link> */}
           </li>
         </ul>
         <button onClick={()=>setOpen(!open)}><i className={open?'uil uil-multiply':'uil uil-bars'}></i></button>

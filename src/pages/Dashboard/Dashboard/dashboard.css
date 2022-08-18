@@ -1,0 +1,44 @@
+.dashboard{
+    padding-top: 5rem;
+}
+.dashboard__container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    max-width: 1400px;
+}
+.logo h3{
+    margin: 2rem 2rem;
+}
+.dashboard__leftbar{
+    position: fixed;
+    display: flex ;
+    flex-direction: column;
+    background-color: var(--color-bg1);
+    height: 88vh;
+    width: 20vw;
+}
+.dashboard__leftbar a{
+    padding: 1rem 0;
+    background: var(--color-bg);
+    padding-left: 2rem;
+    margin:1px 0;
+}
+
+.logout-btn{
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+}
+.logout-btn button{
+    display: block;
+    padding: 1rem 5rem;
+    background:var(--color-bg2);
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.dashboard__right{
+    padding-left: 22vw;
+    width: 96.75vw;
+}

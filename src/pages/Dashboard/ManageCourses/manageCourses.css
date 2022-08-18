@@ -1,0 +1,63 @@
+.manageCourses__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.manageCourses__header{
+   margin-top: 5rem;
+}
+.manageCourses__input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.manageCourses__header h2{
+    font-size: 2rem;
+}
+.manageCourses__header input{
+    padding: .7rem 1rem;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.manageCourses__header button{
+    padding: .7rem 1rem;
+    outline: none;
+    display: inline-block;
+    background: var(--color-bg2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+}
+.manageCourses__results{
+    margin-top: 5rem;
+    width: 100%;
+    border-top: 1px solid var(--color-white);
+}
+.manageCourses__table-data{
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.manageCourses__table-data th, td{
+    border: 1px solid var(--color-bg2);
+    padding: 1rem;
+}
+.manageCourses__table-data th{
+    background: var(--color-primary);
+}
+
+.manageCourses__table-data tr{
+    background: var(--color-bg1);
+}
+.manageCourses__table-data tr:nth-child(2n){
+    background: var(--color-bg2);
+}
+.manageCourses__table-data tr:hover{
+    background: var(--color-bg);
+    cursor: pointer;
+}
